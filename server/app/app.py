@@ -56,5 +56,19 @@ def add():
         'operation': 'addition'
     })
 
+@app.route('/api/tasks', methods=['POST'])
+def create_tasks():
+    data = request.get_json()
+
+    title = data.get('title')
+    description = data.get('description')
+
+    return jsonify({
+        'message': 'Task Created successfully',
+        'task': {
+            'title': title,
+            'description': description
+        }
+    }) , 201
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
