@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Profile</title>
+    <title>Contact Form</title>
     <link rel="stylesheet" href="styling.css">
-    <script src="script.js"></script>
-
 </head>
 <body>
+
+    <!-- THEME TOGGLE BUTTON -->
+   <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
 
     <section id="profile">
 
@@ -83,16 +85,35 @@
 
                 <h2 class="section-title">Contact Me</h2>
 
+                <!-- CONTACT FORM -->
                 <form id="form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
+                    <input id="nameInput" type="text" placeholder="Your Name" required>
+                    <input id="emailInput" type="email" placeholder="Your Email" required>
+                    <textarea id="messageInput" placeholder="Your Message" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
+
+
+                <!-- COUNTER SECTION -->
+                <h2 class="section-title">Counter</h2>
+                <div id="counterSection">
+                    <span id="clickCount">Clicks: 0</span>
+                    <button id="increaseBtn" type="button">Increase</button>
+                    <button id="resetBtn" type="button">Reset</button>
+                </div>
+
+
+
+                <!-- STORED CONTACTS LIST -->
+                <h2 class="section-title">Saved Messages</h2>
+                <div id="contactList"></div>
+
             </div>
         </div>
 
     </section>
 
+    <!-- IMPORTANT: correct JS file name -->
+    <script src="script.js"></script>
 </body>
 </html>

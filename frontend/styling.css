@@ -13,6 +13,23 @@ body {
     padding: 25px;
 }
 
+/* THEME TOGGLE BUTTON */
+.theme-toggle {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    background: #4e8a55;
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+.theme-toggle:hover {
+    background: #3e7044;
+}
+
 /* PROFILE SECTION */
 #profile {
     display: flex;
@@ -24,7 +41,25 @@ body {
     margin-bottom: 40px;
     border-left: 6px solid #4e8a55;
 }
-
+/*#profile {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#profile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+*/
 /* TEXT BLOCK */
 .text {
     width: 60%;
@@ -83,7 +118,7 @@ body {
 }
 
 .section-title {
-    margin-bottom: 20px;
+    margin: 25px 0 15px 0;
     color: #2d5a31;
     font-size: 26px;
 }
@@ -135,7 +170,7 @@ form textarea:focus {
     box-shadow: 0 0 6px rgba(78,138,85,0.3);
 }
 
-/* BUTTON */
+/* FORM BUTTON */
 form button {
     width: 160px;
     padding: 12px;
@@ -150,4 +185,171 @@ form button {
 
 form button:hover {
     background: #3e7044;
+}
+
+/* COUNTER SECTION */
+#counterSection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0 30px 0;
+}
+
+#counterLabel {
+    font-weight: 500;
+}
+
+#counterValue {
+    min-width: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* COUNTER BUTTON */
+#counterBtn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #4e8a55;
+    color: #ffffff;
+    font-size: 14px;
+}
+#counterBtn:hover {
+    background: #3e7044;
+}
+#counterResetBtn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #ef4444; /* red */
+    color: #ffffff;
+    font-size: 14px;
+}
+#counterResetBtn:hover {
+    background: #dc2626;
+}
+
+/* Dark mode reset button will automatically use dark styles if you want: */
+body.dark-mode #counterResetBtn {
+    background: #f97373;
+    color: #0b1120;
+}
+
+/* CONTACT ENTRIES */
+.contact-entry button {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #ef4444;
+    color: #ffffff;
+    font-size: 12px;
+}
+.contact-entry button:hover {
+    background: #dc2626;
+}
+
+/* ========== DARK MODE OVERRIDES ========== */
+
+body.dark-mode {
+    background: #111827;
+    color: #e5e7eb;
+}
+
+body.dark-mode #profile,
+body.dark-mode .text1 {
+    background: #1f2933;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    border-left-color: #38bdf8;
+}
+
+body.dark-mode .section-title,
+body.dark-mode .text h1,
+body.dark-mode .text h2 {
+    color: #e5e7eb;
+}
+
+body.dark-mode #table th {
+    background: #111827;
+    color: #e5e7eb;
+}
+
+body.dark-mode #table tr:nth-child(even) {
+    background: #111827;
+}
+
+body.dark-mode #table td {
+    border-bottom: 1px solid #374151;
+}
+
+/* Dark mode form */
+body.dark-mode form input,
+body.dark-mode form textarea {
+    background: #111827;
+    border-color: #4b5563;
+    color: #e5e7eb;
+}
+
+body.dark-mode form input:focus,
+body.dark-mode form textarea:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 6px rgba(56,189,248,0.6);
+}
+
+/* Dark mode buttons */
+body.dark-mode form button,
+body.dark-mode #counterBtn,
+body.dark-mode .theme-toggle,
+body.dark-mode .contact-entry button {
+    background: #38bdf8;
+    color: #0b1120;
+}
+
+body.dark-mode form button:hover,
+body.dark-mode #counterBtn:hover,
+body.dark-mode .theme-toggle:hover {
+    background: #0ea5e9;
+}
+/* COUNTER SECTION STYLING */
+#counterSection {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#clickCount {
+    font-weight: 600;
+    min-width: 90px;
+}
+
+#increaseBtn, #resetBtn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #4e8a55;
+    color: white;
+    font-size: 14px;
+}
+
+#increaseBtn:hover {
+    background: #3e7044;
+}
+
+#resetBtn {
+    background: #ef4444; /* red button */
+}
+
+#resetBtn:hover {
+    background: #dc2626;
+}
+
+/* DARK MODE BUTTON OVERRIDE */
+body.dark-mode #increaseBtn,
+body.dark-mode #resetBtn {
+    background: #38bdf8;
+    color: #0b1120;
 }
